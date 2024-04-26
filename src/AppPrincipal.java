@@ -4,6 +4,19 @@ import com.aluracursos.alurify.modelos.Podcast;
 public class AppPrincipal {
     public static void main(String[] args) {
 
+        String logo = """
+                 ______      ___                                 ____                         \s
+                /\\  _  \\    /\\_ \\                               /\\  _`\\                       \s
+                \\ \\ \\L\\ \\   \\//\\ \\     __  __   _ __     __     \\ \\ \\L\\_\\ __  __              \s
+                 \\ \\  __ \\    \\ \\ \\   /\\ \\/\\ \\ /\\`'__\\ /'__`\\    \\ \\  _\\//\\ \\/\\ \\             \s
+                  \\ \\ \\/\\ \\    \\_\\ \\_ \\ \\ \\_\\ \\\\ \\ \\/ /\\ \\L\\.\\_   \\ \\ \\/ \\ \\ \\_\\ \\            \s
+                   \\ \\_\\ \\_\\   /\\____\\ \\ \\____/ \\ \\_\\ \\ \\__/.\\_\\   \\ \\_\\  \\/`____ \\           \s
+                    \\/_/\\/_/   \\/____/  \\/___/   \\/_/  \\/__/\\/_/    \\/_/   `/___/> \\          \s
+                                                                              /\\___/          \s
+                                                                              \\/__/\s
+       
+                """;
+        System.out.println(logo);
         /*Cancion cancion = new Cancion();
         cancion.setNombre("One");
         cancion.setAlbum("And Justice for All");
