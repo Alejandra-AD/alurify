@@ -1,9 +1,22 @@
 package com.aluracursos.alurify.modelos;
 
-public class Podcast extends Audio {
+import com.aluracursos.alurify.interfaces.CalcularPopularidad;
+
+public class Podcast extends Audio implements CalcularPopularidad {
     private String nombreProductora;
     private int temporadas;
     private int capitulosPorTemporadas;
+
+
+    //constructor
+
+    public Podcast(String nombre, int reproducciones, int fechaDeLanzamiento, double duracionEnMinutos, String genero, double totalDeMeGustas, int nroReproducciones, String nombreProductora, int temporadas, int capitulosPorTemporadas) {
+        super(nombre, reproducciones, fechaDeLanzamiento, duracionEnMinutos, genero, totalDeMeGustas, nroReproducciones);
+        this.nombreProductora = nombreProductora;
+        this.temporadas = temporadas;
+        this.capitulosPorTemporadas = capitulosPorTemporadas;
+    }
+
 
     //getters
 
@@ -32,6 +45,18 @@ public class Podcast extends Audio {
 
     public void setCapitulosPorTemporadas(int capitulosPorTemporadas){
         this.capitulosPorTemporadas = capitulosPorTemporadas;
+    }
+    @Override
+    public void calcularPopularidad(){
+        if (getNroReproducciones()>=500){
+            System.out.println("Uno de los Podcast mas populares de " + getGenero() + ".");
+        } else if (getNroReproducciones()>=200) {
+            System.out.println("Ayuda a crecer a este podcast");
+        }
+        else{
+            System.out.println("lanzamiento reciente");
+        }
+
     }
 
 
