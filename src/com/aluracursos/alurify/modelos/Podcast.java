@@ -10,8 +10,8 @@ public class Podcast extends Audio implements CalcularPopularidad {
 
     //constructor
 
-    public Podcast(String nombre, int reproducciones, int fechaDeLanzamiento, double duracionEnMinutos, String genero, double totalDeMeGustas, int nroReproducciones, String nombreProductora, int temporadas, int capitulosPorTemporadas) {
-        super(nombre, reproducciones, fechaDeLanzamiento, duracionEnMinutos, genero, totalDeMeGustas, nroReproducciones);
+    public Podcast(String nombre, int reproducciones, int fechaDeLanzamiento, double duracionEnMinutos, String genero, double totalDeMeGustas, String nombreProductora, int temporadas, int capitulosPorTemporadas) {
+        super(nombre, reproducciones, fechaDeLanzamiento, duracionEnMinutos, genero, totalDeMeGustas);
         this.nombreProductora = nombreProductora;
         this.temporadas = temporadas;
         this.capitulosPorTemporadas = capitulosPorTemporadas;
@@ -48,14 +48,34 @@ public class Podcast extends Audio implements CalcularPopularidad {
     }
     @Override
     public void calcularPopularidad(){
-        if (getNroReproducciones()>=500){
+        if (getReproducciones()>=500){
             System.out.println("Uno de los Podcast mas populares de " + getGenero() + ".");
-        } else if (getNroReproducciones()>=200) {
+        } else if (getReproducciones()>=200) {
             System.out.println("Ayuda a crecer a este podcast");
         }
         else{
             System.out.println("lanzamiento reciente");
         }
+
+    }
+
+    public void fichaTecnica(){
+        System.out.println("""
+       ...............................................................
+       Ejemplo Objeto Podcast : "Información"
+       ...............................................................
+       """);
+        System.out.println("Nombre = " + getNombre());
+        System.out.println("Fecha de lanzamiento = " + getFechaDeLanzamiento());
+        System.out.println("Número de temporadas = " + getTemporadas());
+        System.out.println("Productora = " + getNombreProductora());
+        calcularPopularidad();
+        System.out.println("""
+       ...............................................................
+       ...............................................................
+       """);
+
+        System.out.println("\n");
 
     }
 

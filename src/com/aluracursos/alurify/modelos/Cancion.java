@@ -7,8 +7,8 @@ public class Cancion extends Audio implements CalcularPopularidad {
     private String artista;
     private String album;
 
-    public Cancion(String nombre, int reproducciones, int fechaDeLanzamiento, double duracionEnMinutos, String genero, double totalDeMeGustas, int nroReproducciones, String artista, String album) {
-        super(nombre, reproducciones, fechaDeLanzamiento, duracionEnMinutos, genero, totalDeMeGustas, nroReproducciones);
+    public Cancion(String nombre, int reproducciones, int fechaDeLanzamiento, double duracionEnMinutos, String genero, double totalDeMeGustas, String artista, String album) {
+        super(nombre, reproducciones, fechaDeLanzamiento, duracionEnMinutos, genero, totalDeMeGustas);
         this.artista = artista;
         this.album = album;
     }
@@ -35,21 +35,36 @@ public class Cancion extends Audio implements CalcularPopularidad {
         this.album = album;
     }
 
-    public void fichaTecnica(){
-        System.out.println("Información");
-        System.out.println(getNombre());
-        System.out.println(getFechaDeLanzamiento());
-        System.out.println(getAlbum());
-        System.out.println(getArtista());
-    }
+
     @Override
     public void calcularPopularidad() {
         if (getTotalDeMeGustas() >= 9000) {
             System.out.println("Con mas me gustas ♥️");
-        } else if (getNroReproducciones() >= 2000) {
+        } else if (getTotalDeMeGustas() >= 2000) {
             System.out.println("En favoritos de Alurify 😊");
         } else {
             System.out.println("lanzamiento reciente 🥵");
         }
+    }
+
+    public void fichaTecnica(){
+        System.out.println("""
+       ...............................................................
+       Ejemplo Objeto Canción : "Información"
+       ...............................................................
+       """);
+        System.out.println("Nombre = " + getNombre());
+        System.out.println("Fecha de lanzamiento = " + getFechaDeLanzamiento());
+        System.out.println("Álbum = " + getAlbum());
+        System.out.println("Artista = " + getArtista());
+        calcularPopularidad();
+        System.out.println("""
+       ...............................................................
+       ...............................................................
+       """);
+
+
+        System.out.println("\n");
+
     }
 }

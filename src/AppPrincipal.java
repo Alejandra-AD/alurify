@@ -28,13 +28,13 @@ public class AppPrincipal {
 
 
         /*nota: Al fabricar contructores necesariamente se deben utilizar de lo contrario indica un error*/
+        Cancion cancion1 = new Cancion("One",12000,1998,7.27,"Metal",2400,"Metallica","And Justice for All");
+        Cancion cancion2 = new Cancion("Te pido",8000,2022,2,"Urbano",4000,"Tini","Cupido");
+        Podcast podcast1 = new Podcast("Tomás va a morir",2000,2020,120,"comedia 🤣",4000,"Estudios Neverland",4,10);
 
-        Cancion cancion2 = new Cancion("Te pido",8000,2022,2,"Urbano",4000,8000,"Tini","Cupido");
-        Podcast podcast1 = new Podcast("Tomás va a morir",2000,2020,120,"comedia 🤣",4000,2000,"Neverland",4,10);
-
+        cancion1.fichaTecnica();
         cancion2.fichaTecnica();
-        cancion2.calcularPopularidad();
-        podcast1.calcularPopularidad();
+        podcast1.fichaTecnica();
 
     }
 

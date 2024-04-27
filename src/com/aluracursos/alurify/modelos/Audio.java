@@ -8,19 +8,17 @@ public class Audio {
 
     private String genero;
     private double totalDeMeGustas;
-    private int nroReproducciones;
 
     //constructor de audio
 
 
-    public Audio(String nombre, int reproducciones, int fechaDeLanzamiento, double duracionEnMinutos, String genero, double totalDeMeGustas, int nroReproducciones) {
+    public Audio(String nombre, int reproducciones, int fechaDeLanzamiento, double duracionEnMinutos, String genero, double totalDeMeGustas) {
         this.nombre = nombre;
         this.reproducciones = reproducciones;
         this.fechaDeLanzamiento = fechaDeLanzamiento;
         this.duracionEnMinutos = duracionEnMinutos;
         this.genero = genero;
         this.totalDeMeGustas = totalDeMeGustas;
-        this.nroReproducciones = nroReproducciones;
     }
 
     //getters
@@ -44,9 +42,7 @@ public class Audio {
     public double getTotalDeMeGustas() {
         return totalDeMeGustas;
     }
-    public int getNroReproducciones() {
-        return nroReproducciones;
-    }
+
 
 
 
@@ -76,9 +72,6 @@ public class Audio {
         this.totalDeMeGustas = totalDeMeGustas;
     }
 
-    public void setNroReproducciones(int nroReproducciones) {
-        this.nroReproducciones = nroReproducciones;
-    }
 
     //metodos publicos
 
