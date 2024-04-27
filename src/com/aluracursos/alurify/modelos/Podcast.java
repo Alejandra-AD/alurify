@@ -59,6 +59,26 @@ public class Podcast extends Audio implements CalcularPopularidad {
 
     }
 
+    public void play(){
+        System.out.println(
+                """
+                        ...............................................................
+                                 | ___ \\         | |                 | |  \s
+                                | |_/ /___    __| |  ___  __ _  ___ | |_ \s
+                                |  __// _ \\  / _` | / __|/ _` |/ __|| __|\s
+                                | |  | (_) || (_| || (__| (_| |\\__ \\| |_ \s
+                                \\_|   \\___/  \\__,_| \\___|\\__,_||___/ \\__|
+                        ...............................................................
+                        
+                        Ahora reproduciendo: %s
+                        • %s •
+                        ────────⚪────────
+                        ◄◄⠀▐▐ ⠀►►
+                        0:00 / 0:00 ───○ 🔊⠀ ᴴᴰ ⚙ ❐ ⮎1⮌
+                        """.formatted(getNombre(), getNombreProductora())
+        );
+    }
+
     public void fichaTecnica(){
         System.out.println("""
        ...............................................................
@@ -71,6 +91,7 @@ public class Podcast extends Audio implements CalcularPopularidad {
         System.out.println("Productora = " + getNombreProductora());
         calcularPopularidad();
         System.out.println("""
+       
        ...............................................................
        ...............................................................
        """);
